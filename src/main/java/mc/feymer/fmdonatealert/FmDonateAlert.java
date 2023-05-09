@@ -51,8 +51,10 @@ public final class FmDonateAlert extends JavaPlugin implements CommandExecutor {
             list.forEach((a) -> {
                 Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', a.replace("%player%", nick).replace("%donate%", donate)));
             });
-            for (Player players : Bukkit.getOnlinePlayers()) {
-                players.sendTitle(getConfig().getString("messages.title").replace("&", "§"), getConfig().getString("messages.subtitle").replace("%donate%", donate).replace("&", "§").replace("%player%", nick));
+            if (getConfig().getBoolean("enable-title")) {
+                for (Player players : Bukkit.getOnlinePlayers()) {
+                    players.sendTitle(getConfig().getString("messages.title").replace("&", "§"), getConfig().getString("messages.subtitle").replace("%donate%", donate).replace("&", "§").replace("%player%", nick));
+                }
             }
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("messages.success-send")));
             return true;

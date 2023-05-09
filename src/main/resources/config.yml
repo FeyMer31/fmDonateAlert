@@ -27,3 +27,4 @@ messages:
   subtitle: '&c%player% &fкупил %donate%&f!'
   success-send: '&c&lДОНАТ &8◦ &fВы &aуспешно &fотправили сообщение о покупке доната!'
   success-reload: '&c&lДОНАТ &8◦ &fВы перезагрузили плагин!'
+enable-title: true
