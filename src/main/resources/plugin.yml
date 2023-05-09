@@ -1,0 +1,7 @@
+name: fmDonateAlert
+version: '${project.version}'
+main: mc.feymer.fmdonatealert.FmDonateAlert
+authors: [FeyMer]
+website: vk.com/feymer31
+commands:
+  fmda: {}
